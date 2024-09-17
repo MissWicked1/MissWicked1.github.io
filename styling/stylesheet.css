@@ -1,0 +1,110 @@
+/*Ge ex divven/förälderelementet ett id och display:flex; i CSS. Ge även barnelementet display:flex;
+    Flex layouts are composed of:- A Flex container, which contains one or more:- Flex item(s)
+    You can then apply CSS properties on the flex container to 
+    dictate how the flex items are displayed. Justify-content kontrollerar/flyttar barnelement horisontellt. 
+    Space-around ger lika avstånd runt.
+    space-between gör att barnelement ligger mot kanterna.
+    align-items ändrar barnelementet vertikalt. 
+    Spela froggy och läs theorin som är i sliden. Tänk på flex-direction:row-reverse.
+    Responsiv design:
+    @media screen and (min-width:ex 480px){body{ skriv css-kod här}
+    } Föräldern ska vid flex-direction manipuleras inte barnelemntet!
+      Om barnelementet ska byta färg ska endast barnelementet maipuleras och inte föräldern! 
+     kolla media queries på w3 och använd det och flexbox till inlämningsuppgiften!!!!
+    Olika divvar är section, aside- är en sidebar, nav, article- är huvudavsnitt, footer - är längst ner på sidan. 
+    Margin så ska man ange px och tänka att det går klockvis upp->höger->ner->vänster. padding används inne i den innersta boxen för att flytta content från kanten. Seletorer är ex id och class. 
+    Position= I CSS position har vi static (default), relative, absolute och fixed.
+        left, right, bottom och top är inte möjligt på static. om ex. en
+        containerdiv (förälder) är absolut till bottom:0px och left:0px så
+        hamnar den nere i hörnet till vänster. Om divvarna (barnen) inuti
+        containern har relative så rör sig de inom föräldern. Absolute rör sig i
+        förhållande till föräldern/chefen som måste vara relative alt. närmaste
+        chef (hierarktiskt högre element), relative rör sig i förhållande till
+        sitt ursprungsläge som är static. I fixed så rör sig barnen i relation
+        till det större fönstret dvs. bodyn.Om det blir krångligt så kan man använda sig av width, heigth, bottom och top.
+        Left, right, bottom och top är inte möjligt på static.Tänk på att det blir margincollaps dvs att det blir ett min och max avstånd, ej plus ihop.
+        Margins kan vara negativa. De kan även centreras eller flyttas om man kodar margin:auto; istället för text-align. (ex. margin-left: auto; och margin-right 30px.)
+        Line-heigth kan användas så att inline-element inte krockar med varandra. 
+        I CSS position har vi static (default), relative, absolute och fixed. left, right, bottom och top är inte möjligt på static. om ex. en containerdiv (förälder) är absolut till bottom:0px och left:0px så hamnar
+        den nere i hörnet till vänster. Om divvarna (barnen) inuti containern har relative så rör sig de inom föräldern. Absolut rör sig i förhållande till föräldern/chefen som måste vara relative alt. närmaste chef 
+        ( dvs. hierarktiskt högre element), relative rör sig i förhållande till sitt ursprungsläge som är static. I fixed så rör sig barnen i relation till det större fönstret dvs. bodyn.*/
+
+* {
+	border: 1px solid black;
+}
+html body {
+	background-color: pink;
+}
+
+header {
+	background-color: plum;
+	border: 2px solid black;
+	border-radius: 3px;
+	display: flex;
+	margin: 8px;
+	padding: 5px;
+	text-align: center;
+}
+
+#main {
+	background-color: powderblue;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+	border: 2px solid black;
+	border-radius: 3px;
+	margin: 8px;
+	padding: 5px;
+	text-align: left;
+}
+img {
+	width: 200px;
+	height: 200px;
+}
+.posts {
+	margin: 5px;
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+}
+.recept {
+	margin: 5px;
+	padding: 3px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.sidebar {
+	background-color: purple;
+	border: 2px solid black;
+	border-radius: 3px;
+	margin: 8px;
+	padding: 5px;
+	text-align: center;
+}
+
+#button {
+	background-color: aquamarine;
+	margin: 8px;
+	padding: 5px;
+	text-align: center;
+}
+
+#inspiration {
+	background-color: aqua;
+	margin: 8px;
+	padding: 5px;
+	height: 100px;
+	display: flex;
+	flex-wrap: wrap;
+}
+#Extra {
+	margin: 8px;
+	padding: 5px;
+	text-align: center;
+}
+
+a {
+	margin: 5px;
+	padding: 3px;
+}
