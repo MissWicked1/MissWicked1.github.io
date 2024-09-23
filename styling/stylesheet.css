@@ -29,15 +29,14 @@
         den nere i hörnet till vänster. Om divvarna (barnen) inuti containern har relative så rör sig de inom föräldern. Absolut rör sig i förhållande till föräldern/chefen som måste vara relative alt. närmaste chef 
         ( dvs. hierarktiskt högre element), relative rör sig i förhållande till sitt ursprungsläge som är static. I fixed så rör sig barnen i relation till det större fönstret dvs. bodyn.*/
 
-* {
-	border: 1px solid black;
-}
 html body {
-	background-color: pink;
+	background-color: lightslategrey;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 header {
-	background-color: plum;
+	background-color: white;
 	border: 2px solid black;
 	border-radius: 3px;
 	display: flex;
@@ -47,20 +46,25 @@ header {
 }
 
 #main {
-	background-color: powderblue;
+	background-color: lightgrey;
 	display: flex;
 	justify-content: space-around;
 	flex-direction: row;
 	flex-wrap: wrap;
+	flex: 2;
 	border: 2px solid black;
 	border-radius: 3px;
 	margin: 8px;
 	padding: 5px;
 	text-align: left;
 }
+#Pic1 {
+	width: 100px;
+	height: 100px;
+}
 img {
-	width: 200px;
-	height: 200px;
+	width: 100px;
+	height: 100px;
 }
 .posts {
 	margin: 5px;
@@ -69,42 +73,90 @@ img {
 	flex-direction: column;
 }
 .recept {
+	border: 1px solid black;
 	margin: 5px;
 	padding: 3px;
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
+	border-radius: 4px;
 }
 .sidebar {
-	background-color: purple;
-	border: 2px solid black;
-	border-radius: 3px;
+	display: flex;
+	flex: 1;
+	height: 200px;
+	background-color: lightgrey;
+	border: 1px solid black;
+	border-radius: 15px;
 	margin: 8px;
 	padding: 5px;
 	text-align: center;
 }
 
+.arkiv {
+	margin-top: 50px;
+	padding: 15px;
+	border: 1px solid black;
+	border-radius: 4px;
+}
 #button {
-	background-color: aquamarine;
-	margin: 8px;
-	padding: 5px;
-	text-align: center;
+	border: 1px solid black;
+	border-radius: 4px;
+	display: flex;
+	background-color: lightgrey;
+	margin-top: 8px;
+	padding-bottom: 50px;
+	padding-left: 80px;
+	margin-bottom: 50px;
+	width: 100%;
 }
 
 #inspiration {
-	background-color: aqua;
+	border: 1px solid black;
+	border-radius: 4px;
+	background-color: lightgray;
 	margin: 8px;
 	padding: 5px;
 	height: 100px;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	flex-wrap: wrap;
 }
 #Extra {
 	margin: 8px;
 	padding: 5px;
 	text-align: center;
+	border: 1px solid black;
+	border-radius: 4px;
 }
 
 a {
 	margin: 5px;
 	padding: 3px;
+}
+form {
+	margin: 15px;
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+}
+label {
+	margin: 5px;
+}
+input {
+	margin: 5px;
+	border: 1px solid black;
+	border-radius: 4px;
+}
+textarea {
+	margin: 5px;
+	border: 1px solid black;
+	border-radius: 4px;
+}
+.button {
+	max-width: 100px;
+	padding: 6px;
+	border: 1px solid black;
+	border-radius: 4px;
 }
