@@ -27,7 +27,36 @@
         Line-heigth kan användas så att inline-element inte krockar med varandra. 
         I CSS position har vi static (default), relative, absolute och fixed. left, right, bottom och top är inte möjligt på static. om ex. en containerdiv (förälder) är absolut till bottom:0px och left:0px så hamnar
         den nere i hörnet till vänster. Om divvarna (barnen) inuti containern har relative så rör sig de inom föräldern. Absolut rör sig i förhållande till föräldern/chefen som måste vara relative alt. närmaste chef 
-        ( dvs. hierarktiskt högre element), relative rör sig i förhållande till sitt ursprungsläge som är static. I fixed så rör sig barnen i relation till det större fönstret dvs. bodyn.*/
+        ( dvs. hierarktiskt högre element), relative rör sig i förhållande till sitt ursprungsläge som är static. I fixed så rör sig barnen i relation till det större fönstret dvs. bodyn.
+		 
+		
+		
+		<style>
+			header {
+				display: flex;
+			}
+			nav {
+				display: flex;
+				justify-content: space-around;
+			}
+			p {
+				margin: 50px;
+				padding: 0;
+				background-color: plum;
+				border: 2px solid black;
+				border-radius: 4px;
+				display: flex;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<p>Home</p>
+				<p>News</p>
+				<p>About</p>
+			</nav>
+		</header>*/
 
 html body {
 	background-color: lightslategrey;
@@ -36,20 +65,39 @@ html body {
 }
 
 header {
-	background-color: white;
+	background-color: lightgray;
 	border: 2px solid black;
-	border-radius: 3px;
+	border-radius: 8px;
 	display: flex;
-	margin: 8px;
 	padding: 5px;
 	text-align: center;
+	height: 100px;
+	width: 800px;
+}
+.navbar {
+	position: absolute;
+}
+#logos1 {
+	border: 2px solid;
+	padding: 2px;
+	border-radius: 40px 20px;
+}
+#logos2 {
+	border: 1px solid black;
+	padding: 2px;
+	border-radius: 40px 20px;
+}
+#logos3 {
+	border: 1px solid black;
+	padding: 2px;
+	border-radius: 40px 20px;
 }
 
 #main {
 	background-color: lightgrey;
 	display: flex;
 	justify-content: space-around;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
 	flex: 2;
 	border: 2px solid black;
@@ -58,19 +106,41 @@ header {
 	padding: 5px;
 	text-align: left;
 }
-#Pic1 {
+
+img {
+	padding: 2px;
+	border: 1px solid black;
+	border-radius: 40px 20px;
 	width: 100px;
 	height: 100px;
 }
-img {
-	width: 100px;
-	height: 100px;
+h1 {
+	text-align: center;
+}
+p {
+	text-align: center;
+	padding: 5px;
+}
+.R {
+	border: 1px solid black;
+	padding: 2px;
+	border-radius: 40px 20px;
+}
+
+#Mormors-logo {
+	border: 1px solid black;
+	padding: 2px;
+	border-radius: 40px 20px;
 }
 .posts {
 	margin: 5px;
 	padding: 8px;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+}
+.recipe {
+	margin-top: 8px;
 }
 .recept {
 	border: 1px solid black;
@@ -99,6 +169,7 @@ img {
 	border: 1px solid black;
 	border-radius: 4px;
 }
+
 #button {
 	border: 1px solid black;
 	border-radius: 4px;
@@ -117,7 +188,7 @@ img {
 	background-color: lightgray;
 	margin: 8px;
 	padding: 5px;
-	height: 100px;
+	height: 150px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -132,7 +203,7 @@ img {
 }
 
 a {
-	margin: 5px;
+	margin: 2px;
 	padding: 3px;
 }
 form {
