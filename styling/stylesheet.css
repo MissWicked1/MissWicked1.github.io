@@ -83,13 +83,16 @@ img {
 	width: 100px;
 	height: 100px;
 }
+
 h1 {
 	text-align: center;
 }
+
 p {
 	text-align: center;
 	padding: 5px;
 }
+
 .R {
 	border: 1px solid black;
 
@@ -120,12 +123,18 @@ p {
 	border-radius: 4px;
 }
 
+ul {
+	text-align: center;
+	list-style-type: none;
+}
+
 form {
 	margin: 15px;
 	display: flex;
 	flex-direction: column;
 	max-width: 400px;
 }
+
 .arkiv {
 	margin-top: 25px;
 	margin-bottom: 25px;
@@ -149,19 +158,6 @@ button {
 	border: 1px solid black;
 	border-radius: 4px;
 }
-#inspiration {
-	border: 1px solid black;
-	border-radius: 4px;
-	background-color: lightgray;
-	margin: 8px;
-	padding: 5px;
-	height: auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	width: 100%;
-}
 
 input {
 	margin: 5px;
@@ -183,4 +179,18 @@ textarea {
 label {
 	margin: 5px;
 	text-align: center;
+}
+
+#inspiration {
+	border: 1px solid black;
+	border-radius: 4px;
+	background-color: lightgray;
+	margin: 8px;
+	padding: 5px;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
 }
