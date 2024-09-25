@@ -1,35 +1,3 @@
-/*Ge ex divven/förälderelementet ett id och display:flex; i CSS. Ge även barnelementet display:flex;
-    Flex layouts are composed of:- A Flex container, which contains one or more:- Flex item(s)
-    You can then apply CSS properties on the flex container to 
-    dictate how the flex items are displayed. Justify-content kontrollerar/flyttar barnelement horisontellt. 
-    Space-around ger lika avstånd runt.
-    space-between gör att barnelement ligger mot kanterna.
-    align-items ändrar barnelementet vertikalt. 
-    Spela froggy och läs theorin som är i sliden. Tänk på flex-direction:row-reverse.
-    Responsiv design:
-    @media screen and (min-width:ex 480px){body{ skriv css-kod här}
-    } Föräldern ska vid flex-direction manipuleras inte barnelemntet!
-      Om barnelementet ska byta färg ska endast barnelementet maipuleras och inte föräldern! 
-     kolla media queries på w3 och använd det och flexbox till inlämningsuppgiften!!!!
-    Olika divvar är section, aside- är en sidebar, nav, article- är huvudavsnitt, footer - är längst ner på sidan. 
-    Margin så ska man ange px och tänka att det går klockvis upp->höger->ner->vänster. padding används inne i den innersta boxen för att flytta content från kanten. Seletorer är ex id och class. 
-    Position= I CSS position har vi static (default), relative, absolute och fixed.
-        left, right, bottom och top är inte möjligt på static. om ex. en
-        containerdiv (förälder) är absolut till bottom:0px och left:0px så
-        hamnar den nere i hörnet till vänster. Om divvarna (barnen) inuti
-        containern har relative så rör sig de inom föräldern. Absolute rör sig i
-        förhållande till föräldern/chefen som måste vara relative alt. närmaste
-        chef (hierarktiskt högre element), relative rör sig i förhållande till
-        sitt ursprungsläge som är static. I fixed så rör sig barnen i relation
-        till det större fönstret dvs. bodyn.Om det blir krångligt så kan man använda sig av width, heigth, bottom och top.
-        Left, right, bottom och top är inte möjligt på static.Tänk på att det blir margincollaps dvs att det blir ett min och max avstånd, ej plus ihop.
-        Margins kan vara negativa. De kan även centreras eller flyttas om man kodar margin:auto; istället för text-align. (ex. margin-left: auto; och margin-right 30px.)
-        Line-heigth kan användas så att inline-element inte krockar med varandra. 
-        I CSS position har vi static (default), relative, absolute och fixed. left, right, bottom och top är inte möjligt på static. om ex. en containerdiv (förälder) är absolut till bottom:0px och left:0px så hamnar
-        den nere i hörnet till vänster. Om divvarna (barnen) inuti containern har relative så rör sig de inom föräldern. Absolut rör sig i förhållande till föräldern/chefen som måste vara relative alt. närmaste chef 
-        ( dvs. hierarktiskt högre element), relative rör sig i förhållande till sitt ursprungsläge som är static. I fixed så rör sig barnen i relation till det större fönstret dvs. bodyn.
-		 */
-
 html body {
 	background-color: lightslategrey;
 	display: flex;
@@ -44,27 +12,56 @@ header {
 	padding: 5px;
 	text-align: center;
 	height: 100px;
-	width: 800px;
+	width: 100%;
 }
 .navbar {
 	position: absolute;
 }
-#logos1 {
-	border: 2px solid;
-	padding: 2px;
-	border-radius: 40px 20px;
-}
-#logos2 {
+#Mormors-logo {
+	position: relative;
+	left: 5px;
+	top: 20px;
+	width: 80px;
+	height: 80px;
 	border: 1px solid black;
-	padding: 2px;
-	border-radius: 40px 20px;
-}
-#logos3 {
-	border: 1px solid black;
-	padding: 2px;
 	border-radius: 40px 20px;
 }
 
+#logos {
+	position: absolute;
+	right: 15px;
+	border: none;
+	border-radius: 40px 20px;
+	display: flex;
+	flex-direction: row;
+	padding-top: 50px;
+}
+#logos1 {
+	width: 50px;
+	height: 50px;
+}
+#logos2 {
+	width: 50px;
+	height: 50px;
+}
+#logos3 {
+	width: 50px;
+	height: 50px;
+}
+.sidebar {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	flex-wrap: wrap;
+	flex: 1;
+	height: 200px;
+	background-color: lightgrey;
+	border: 1px solid black;
+	border-radius: 15px;
+	margin: 8px;
+	padding: 5px;
+	text-align: center;
+}
 #main {
 	background-color: lightgrey;
 	display: flex;
@@ -95,15 +92,11 @@ p {
 }
 .R {
 	border: 1px solid black;
+
 	padding: 2px;
 	border-radius: 40px 20px;
 }
 
-#Mormors-logo {
-	border: 1px solid black;
-	padding: 2px;
-	border-radius: 40px 20px;
-}
 .posts {
 	margin: 5px;
 	padding: 8px;
@@ -113,6 +106,9 @@ p {
 }
 .recipe {
 	margin-top: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .recept {
 	border: 1px solid black;
@@ -123,20 +119,16 @@ p {
 	flex-wrap: wrap;
 	border-radius: 4px;
 }
-.sidebar {
-	display: flex;
-	flex: 1;
-	height: 200px;
-	background-color: lightgrey;
-	border: 1px solid black;
-	border-radius: 15px;
-	margin: 8px;
-	padding: 5px;
-	text-align: center;
-}
 
+form {
+	margin: 15px;
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+}
 .arkiv {
-	margin-top: 50px;
+	margin-top: 25px;
+	margin-bottom: 25px;
 	padding: 15px;
 	border: 1px solid black;
 	border-radius: 4px;
@@ -146,14 +138,17 @@ p {
 	border: 1px solid black;
 	border-radius: 4px;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	background-color: lightgrey;
-	margin-top: 8px;
-	padding-bottom: 50px;
-	padding-left: 80px;
 	margin-bottom: 50px;
 	width: 100%;
 }
-
+button {
+	padding: 6px;
+	border: 1px solid black;
+	border-radius: 4px;
+}
 #inspiration {
 	border: 1px solid black;
 	border-radius: 4px;
@@ -165,11 +160,13 @@ p {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
+	width: 100%;
 }
-#Extra {
-	margin: 8px;
-	padding: 5px;
-	text-align: center;
+
+/*på kontakta oss och index*/
+
+input {
+	margin: 5px;
 	border: 1px solid black;
 	border-radius: 4px;
 }
@@ -178,35 +175,14 @@ a {
 	margin: 2px;
 	padding: 3px;
 }
-form {
-	margin: 15px;
-	display: flex;
-	flex-direction: column;
-	max-width: 400px;
-}
-label {
-	margin: 5px;
-}
-input {
-	margin: 5px;
-	border: 1px solid black;
-	border-radius: 4px;
-}
+
+/*på kontakta oss sidan*/
+
 textarea {
 	margin: 5px;
 	border: 1px solid black;
 	border-radius: 4px;
 }
-.button {
-	max-width: 100px;
-	padding: 6px;
-	border: 1px solid black;
-	border-radius: 4px;
-}
-
-@media screen and (min-width: 800px) {
-	.sidebar {
-		display: flex;
-		flex-wrap: wrap;
-	}
+label {
+	margin: 5px;
 }
