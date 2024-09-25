@@ -28,35 +28,7 @@
         I CSS position har vi static (default), relative, absolute och fixed. left, right, bottom och top är inte möjligt på static. om ex. en containerdiv (förälder) är absolut till bottom:0px och left:0px så hamnar
         den nere i hörnet till vänster. Om divvarna (barnen) inuti containern har relative så rör sig de inom föräldern. Absolut rör sig i förhållande till föräldern/chefen som måste vara relative alt. närmaste chef 
         ( dvs. hierarktiskt högre element), relative rör sig i förhållande till sitt ursprungsläge som är static. I fixed så rör sig barnen i relation till det större fönstret dvs. bodyn.
-		 
-		
-		
-		<style>
-			header {
-				display: flex;
-			}
-			nav {
-				display: flex;
-				justify-content: space-around;
-			}
-			p {
-				margin: 50px;
-				padding: 0;
-				background-color: plum;
-				border: 2px solid black;
-				border-radius: 4px;
-				display: flex;
-			}
-		</style>
-	</head>
-	<body>
-		<header>
-			<nav>
-				<p>Home</p>
-				<p>News</p>
-				<p>About</p>
-			</nav>
-		</header>*/
+		 */
 
 html body {
 	background-color: lightslategrey;
@@ -188,7 +160,7 @@ p {
 	background-color: lightgray;
 	margin: 8px;
 	padding: 5px;
-	height: 150px;
+	height: auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -230,4 +202,11 @@ textarea {
 	padding: 6px;
 	border: 1px solid black;
 	border-radius: 4px;
+}
+
+@media screen and (min-width: 800px) {
+	.sidebar {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
