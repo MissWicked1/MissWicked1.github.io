@@ -163,8 +163,6 @@ button {
 	width: 100%;
 }
 
-/*på kontakta oss och index*/
-
 input {
 	margin: 5px;
 	border: 1px solid black;
@@ -176,13 +174,13 @@ a {
 	padding: 3px;
 }
 
-/*på kontakta oss sidan*/
-
 textarea {
 	margin: 5px;
 	border: 1px solid black;
 	border-radius: 4px;
 }
+
 label {
 	margin: 5px;
+	text-align: center;
 }
