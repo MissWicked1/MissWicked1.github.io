@@ -16,6 +16,7 @@ header {
 }
 .navbar {
 	position: absolute;
+	width: 100%;
 }
 #Mormors-logo {
 	position: relative;
@@ -53,8 +54,8 @@ header {
 	justify-content: space-around;
 	flex-direction: column;
 	flex-wrap: wrap;
-	flex: 1;
-	height: 200px;
+	width: 280px;
+	height: 300px;
 	background-color: lightgrey;
 	border: 1px solid black;
 	border-radius: 15px;
@@ -193,4 +194,9 @@ label {
 	justify-content: center;
 	flex-wrap: wrap;
 	width: 100%;
+}
+@media screen and (max-width: 650px) {
+	.sidebar {
+		flex-direction: column;
+	}
 }
