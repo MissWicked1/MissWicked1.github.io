@@ -1,3 +1,6 @@
+* {
+	box-sizing: border-box;
+}
 html body {
 	background-color: lightslategrey;
 	display: flex;
@@ -9,21 +12,18 @@ header {
 	border: 2px solid black;
 	border-radius: 8px;
 	display: flex;
-	padding: 5px;
-	text-align: center;
-	height: 100px;
+	padding: 8px;
+	height: 108px;
 	width: 100%;
 }
 .navbar {
 	position: absolute;
-	width: 100%;
 }
 #Mormors-logo {
 	position: relative;
 	left: 5px;
 	top: 20px;
-	width: 80px;
-	height: 80px;
+	height: 75px;
 	border: 1px solid black;
 	border-radius: 40px 20px;
 }
@@ -38,43 +38,27 @@ header {
 	padding-top: 50px;
 }
 #logos1 {
-	width: 50px;
-	height: 50px;
+	width: 45px;
+	height: 45px;
 }
-#logos2 {
-	width: 50px;
-	height: 50px;
-}
-#logos3 {
-	width: 50px;
-	height: 50px;
-}
+
 .sidebar {
-	display: flex;
-	justify-content: space-around;
-	flex-direction: column;
-	flex-wrap: wrap;
 	width: 280px;
-	height: 300px;
+	height: 350px;
 	background-color: lightgrey;
-	border: 1px solid black;
+	border: 2px solid black;
 	border-radius: 15px;
 	margin: 8px;
-	padding: 5px;
 	text-align: center;
+	max-width: 20%;
 }
 #main {
 	background-color: lightgrey;
-	display: flex;
-	justify-content: space-around;
-	flex-direction: column;
-	flex-wrap: wrap;
-	flex: 2;
 	border: 2px solid black;
-	border-radius: 3px;
+	border-radius: 15px;
 	margin: 8px;
 	padding: 5px;
-	text-align: left;
+	max-width: 70%;
 }
 
 img {
@@ -85,20 +69,12 @@ img {
 	height: 100px;
 }
 
-h1 {
-	text-align: center;
-}
-
+h1,
+h2,
+h3,
 p {
 	text-align: center;
 	padding: 5px;
-}
-
-.R {
-	border: 1px solid black;
-
-	padding: 2px;
-	border-radius: 40px 20px;
 }
 
 .posts {
@@ -106,7 +82,6 @@ p {
 	padding: 8px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 }
 .recipe {
 	margin-top: 8px;
@@ -117,7 +92,7 @@ p {
 .recept {
 	border: 1px solid black;
 	margin: 5px;
-	padding: 3px;
+	padding: 5px;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -130,13 +105,13 @@ ul {
 }
 
 form {
-	margin: 15px;
+	margin: auto;
 	display: flex;
 	flex-direction: column;
-	max-width: 400px;
+	max-width: 300px;
 }
 
-.arkiv {
+button {
 	margin-top: 25px;
 	margin-bottom: 25px;
 	padding: 15px;
@@ -145,24 +120,25 @@ form {
 }
 
 #button {
-	border: 1px solid black;
-	border-radius: 4px;
+	border: 2px solid black;
+	border-radius: 15px;
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	background-color: lightgrey;
 	margin-bottom: 50px;
 	width: 100%;
 }
-button {
+.button {
+	margin: auto;
 	padding: 6px;
 	border: 1px solid black;
 	border-radius: 4px;
+	max-width: 150px;
 }
 
 input {
-	margin: 5px;
-	border: 1px solid black;
+	margin: 5px 15px;
+	border: 2px solid black;
 	border-radius: 4px;
 }
 
@@ -173,7 +149,7 @@ a {
 
 textarea {
 	margin: 5px;
-	border: 1px solid black;
+	border: 2px solid black;
 	border-radius: 4px;
 }
 
@@ -188,15 +164,17 @@ label {
 	background-color: lightgray;
 	margin: 8px;
 	padding: 5px;
-	height: auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	width: 100%;
 }
-@media screen and (max-width: 650px) {
-	.sidebar {
+@media screen and (max-width: 992px) {
+	body {
 		flex-direction: column;
+	}
+	.sidebar {
+		height: auto;
 	}
 }
